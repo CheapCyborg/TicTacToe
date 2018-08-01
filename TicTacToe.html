@@ -1,19 +1,19 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
 	<title>
 		Tic-Tac-Toe
 	</title>
 	<link rel="stylesheet" href="./css/style.css">
-	<script src='js/jquery-3.3.1.min.js' type="text/javascript">
-	</script>
+	<script src='js/jquery-3.3.1.min.js' type="text/javascript"></script>
 </head>
 <script>
 	var turn = 0;
 	var space1, space2, space3, space4, space5, space6, space7, space8, space9;
-	$(document).ready(function () {
-		$('#cellOne').click(function () { //box 1
+	var playerOne = prompt("Player One Enter Your Name");
+	var playerTwo = prompt("Player Two Enter Your Name")
+	$(document).ready(function() {
+		$('#cellOne').click(function() { //box 1
 			if (turn == 0) {
 				$('#cellOne').html("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Moon_Letter_O.svg/120px-Moon_Letter_O.svg.png'/>");
 				$('#cellOne').val(0);
@@ -21,7 +21,8 @@
 				calculateWinner();
 				checkForWinner();
 				turn++;
-			} else {
+				}
+			else {
 				$('#cellOne').html("<img src='https://vignette.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859'/>");
 				$('#cellOne').val(1);
 				space1 = $("#cellOne").val();
@@ -30,7 +31,7 @@
 				turn--;
 			}
 		});
-		$('#cellTwo').click(function () { //box 2
+		$('#cellTwo').click(function() { //box 2
 			if (turn == 0) {
 				$('#cellTwo').html("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Moon_Letter_O.svg/120px-Moon_Letter_O.svg.png'/>");
 				$('#cellTwo').val(0);
@@ -38,7 +39,8 @@
 				calculateWinner();
 				checkForWinner();
 				turn++;
-			} else {
+				}
+			else {
 				$('#cellTwo').html("<img src='https://vignette.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859'/>");
 				$('#cellTwo').val(1);
 				space2 = $("#cellTwo").val();
@@ -47,7 +49,7 @@
 				turn--;
 			}
 		});
-		$('#cellThree').click(function () { //box 3
+		$('#cellThree').click(function() { //box 3
 			if (turn == 0) {
 				$('#cellThree').html("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Moon_Letter_O.svg/120px-Moon_Letter_O.svg.png'/>");
 				$('#cellThree').val(0);
@@ -55,7 +57,8 @@
 				calculateWinner();
 				checkForWinner();
 				turn++;
-			} else {
+				}
+			else {
 				$('#cellThree').html("<img src='https://vignette.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859'/>");
 				$('#cellThree').val(1);
 				space3 = $("#cellThree").val();
@@ -64,7 +67,7 @@
 				turn--;
 			}
 		});
-		$('#cellFour').click(function () { //box 4
+		$('#cellFour').click(function() { //box 4
 			if (turn == 0) {
 				$('#cellFour').html("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Moon_Letter_O.svg/120px-Moon_Letter_O.svg.png'/>");
 				$('#cellFour').val(0);
@@ -72,7 +75,8 @@
 				calculateWinner();
 				checkForWinner();
 				turn++;
-			} else {
+				}
+			else {
 				$('#cellFour').html("<img src='https://vignette.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859'/>");
 				$('#cellFour').val(1);
 				space4 = $("#cellFour").val();
@@ -81,7 +85,7 @@
 				turn--;
 			}
 		});
-		$('#cellFive').click(function () { //box 5
+		$('#cellFive').click(function() { //box 5
 			if (turn == 0) {
 				$('#cellFive').html("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Moon_Letter_O.svg/120px-Moon_Letter_O.svg.png'/>");
 				$('#cellFive').val(0);
@@ -89,7 +93,8 @@
 				calculateWinner();
 				checkForWinner();
 				turn++;
-			} else {
+				}
+			else {
 				$('#cellFive').html("<img src='https://vignette.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859'/>");
 				$('#cellFive').val(1);
 				space5 = $("#cellFive").val();
@@ -98,7 +103,7 @@
 				turn--;
 			}
 		});
-		$('#cellSix').click(function () { //box 6
+		$('#cellSix').click(function() { //box 6
 			if (turn == 0) {
 				$('#cellSix').html("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Moon_Letter_O.svg/120px-Moon_Letter_O.svg.png'/>");
 				$('#cellSix').val(0);
@@ -106,7 +111,8 @@
 				calculateWinner();
 				checkForWinner();
 				turn++;
-			} else {
+				}
+			else {
 				$('#cellSix').html("<img src='https://vignette.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859'/>");
 				$('#cellSix').val(1);
 				space6 = $("#cellSix").val();
@@ -115,15 +121,16 @@
 				turn--;
 			}
 		});
-		$('#cellSeven').click(function () { //box 7
+		$('#cellSeven').click(function() { //box 7
 			if (turn == 0) {
 				$('#cellSeven').html("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Moon_Letter_O.svg/120px-Moon_Letter_O.svg.png'/>");
 				$('#cellSeven').val(0);
-				space7 = $("#cell").val();
+				space7 = $("#cellSeven").val();
 				calculateWinner();
 				checkForWinner();
 				turn++;
-			} else {
+				}
+			else {
 				$('#cellSeven').html("<img src='https://vignette.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859'/>");
 				$('#cellSeven').val(1);
 				space7 = $("#cellSeven").val();
@@ -132,7 +139,7 @@
 				turn--;
 			}
 		});
-		$('#cellEight').click(function () { //box 8
+		$('#cellEight').click(function() { //box 8
 			if (turn == 0) {
 				$('#cellEight').html("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Moon_Letter_O.svg/120px-Moon_Letter_O.svg.png'/>");
 				$('#cellEight').val(0);
@@ -140,7 +147,8 @@
 				calculateWinner();
 				checkForWinner();
 				turn++;
-			} else {
+				}
+			else {
 				$('#cellEight').html("<img src='https://vignette.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859'/>");
 				$('#cellEight').val(1);
 				space8 = $("#cellEight").val();
@@ -149,7 +157,7 @@
 				turn--;
 			}
 		});
-		$('#cellNine').click(function () { //box 9
+		$('#cellNine').click(function() { //box 9
 			if (turn == 0) {
 				$('#cellNine').html("<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Moon_Letter_O.svg/120px-Moon_Letter_O.svg.png'/>");
 				$('#cellNine').val(0);
@@ -157,7 +165,8 @@
 				calculateWinner();
 				checkForWinner();
 				turn++;
-			} else {
+				}
+			else {
 				$('#cellNine').html("<img src='https://vignette.wikia.nocookie.net/grimm/images/a/a5/X.png/revision/latest?cb=20161103004859'/>");
 				$('#cellNine').val(1);
 				space9 = $("#cellNine").val();
@@ -169,56 +178,61 @@
 		//Chnage color on hover
 		$('td').hover(function () {
 			$(this).css("background-color", "yellow");
-		}, function () {
-			$(this).css("background-color", "white");
-		});
-	});
-
+		}, function(){
+			$(this).css("background-color", "#eeeeee");
+			});
+});
 	function checkForWinner() {
-		if (calculateWinner() == 0) {
-			alert("Player 1 Wins!")
-		} else if (calculateWinner() == 1) {
-			alert("Player 2 Wins!")
+		console.log(calculateWinner())
+		if(calculateWinner() == 0){
+			alert(playerOne + " Wins!")
+		}
+		else if (calculateWinner() == 1) {
+			alert(playerTwo +" Wins!")
 		}
 	}
-
 	function calculateWinner() {
 		// check rows
 		if ((space1 == space2) && (space2 == space3)) {
 			return space3;
-		} else if ((space4 == space5) && (space5 == space6)) {
+		}
+		else if ((space4 == space5) && (space5 == space6)) {
 			return space6;
-		} else if ((space7 == space8) && (space8 == space9)) {
+		}
+		else if ((space7 == space8) && (space8 == space9)) {
 			return space9;
 		}
 		// check columns
 		else if ((space1 == space4) && (space4 == space7)) {
 			return space7;
-		} else if ((space2 == space5) && (space5 == space8)) {
+		}
+		else if ((space2 == space5) && (space5 == space8)) {
 			return space8;
-		} else if ((space3 == space6) && (space6 == space9)) {
+		}
+		else if ((space3 == space6) && (space6 == space9)) {
 			return space9;
 		}
 		// check diagonals
 		else if ((space1 == space5) && (space5 == space9)) {
 			return space9;
-		} else if ((space3 == space5) && (space5 == space7)) {
+		}
+		else if ((space3 == space5) && (space5 == space7)) {
 			return space7;
 		}
 		// no winner
 		return -1;
 	}
 </script>
-
 <body>
 	<div class="container">
-		<table border="10px">
-			<thead>
-				<th style="text-align: center" colspan="3">Tic-Tac-Toe</th>
-			</thead>
+		<div class="game-board">
+			<table>
+				<thead>
+					<th class="no-border" colspan="3">Tic-Tac-Toe</th>
+				</thead>
 			<tbody>
 				<tr>
-					<td id="cellOne">
+					<td class="no-border" id="cellOne">
 					</td>
 					<td id="cellTwo">
 					</td>
@@ -226,24 +240,24 @@
 					</td>
 				</tr>
 				<tr>
-					<td id="cellFour">
+					<td class="no-border" id="cellFour">
 					</td>
-					<td id="cellFive">
+					<td id ="cellFive">
 					</td>
 					<td id="cellSix">
 					</td>
 				</tr>
 				<tr>
-					<td id="cellSeven">
+					<td class="no-border no-bottom" id="cellSeven">
 					</td>
-					<td id="cellEight">
+					<td class="no-bottom" id="cellEight">
 					</td>
-					<td id="cellNine">
+					<td class="no-bottom" id="cellNine">
 					</td>
 				</tr>
 			</tbody>
-		</table>
+			</table>
+		</div>
 	</div>
 </body>
-
 </html>
